@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../config/axios";
 import "./Login.css";
-import { useAuth } from "../context/authContext"; // ✅ import
+import { useAuth } from "../context/AuthContext"; // ✅ import
 
 
 const characters = [
