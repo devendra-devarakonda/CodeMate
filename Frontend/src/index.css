@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+
+.user-cursor::before {
+  content: "";
+  border-left: 2px solid red;
+  height: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cursor-label-red::before {
+  content: "👤";
+  color: red;
+  margin-right: 2px;
+}
+.cursor-label-green::before {
+  content: "👤";
+  color: green;
+  margin-right: 2px;
+}
+.cursor-label-yellow::before {
+  content: "👤";
+  color: yellow;
+  margin-right: 2px;
+}
+.cursor-label-blue::before {
+  content: "👤";
+  color: blue;
+  margin-right: 2px;
+}
+.cursor-label-purple::before {
+  content: "👤";
+  color: purple;
+  margin-right: 2px;
+}
+
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 10s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+}
