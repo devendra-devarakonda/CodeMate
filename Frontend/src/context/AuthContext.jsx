@@ -11,6 +11,7 @@ function subscribe(callback) {
   };
 }
 
+
 function getSnapshot() {
   return !!localStorage.getItem("token");
 }
