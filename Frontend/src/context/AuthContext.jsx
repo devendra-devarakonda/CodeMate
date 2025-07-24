@@ -10,8 +10,6 @@ function subscribe(callback) {
     window.removeEventListener("focus", callback);
   };
 }
-
-
 function getSnapshot() {
   return !!localStorage.getItem("token");
 }
