@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../Pages/Home.jsx';
 import Register from '../Pages/Register.jsx';
 import Login from '../Pages/Login.jsx';
-import OtpVerification from '../Pages/otpVerification.jsx';
+import OtpVerification from '../Pages/OtpVerification.jsx';
 import ForgotPassword from '../Pages/forgotPassword.jsx';
 import CreateRoom from '../Pages/createRoom.jsx';
 import DevRoom from '../Components/DevRoom/DevRoom.jsx';
