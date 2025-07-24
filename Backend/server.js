@@ -152,6 +152,8 @@ const io = new Server(server, {
 
 app.use('/api/auth', userRouter(io));
 
+const port = process.env.PORT || 5000;
+
 const typingUsers = new Map();
 
 const roomParticipants = {};
@@ -232,6 +234,6 @@ socket.on("language-change", ({ roomId, language }) => {
   });
 });
 
-server.listen(5000, () => {
+server.listen(port, () => {
   console.log("Server listening on port 5000");
 });
