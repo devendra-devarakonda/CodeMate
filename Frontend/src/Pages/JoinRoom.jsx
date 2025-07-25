@@ -55,7 +55,9 @@ const handleJoin = async (e) => {
     }
 
     
-    const userEmail = localStorage.getItem("userEmail");
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const userEmail = storedUser?.email;
+
 
     if (!userEmail) {
       setError("❌ You must be logged in to join a room.");

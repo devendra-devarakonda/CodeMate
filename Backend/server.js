@@ -146,10 +146,12 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://codemate-99nl.onrender.com", // your frontend URL
-    credentials: true,
-  },
+    origin: ["http://localhost:5173", "https://codemate-99nl.onrender.com"],
+    methods: ["GET", "POST"],
+    credentials: true
+  }
 });
+
 
 app.use('/api/auth', userRouter(io));
 

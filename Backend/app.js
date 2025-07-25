@@ -22,12 +22,11 @@ import cors from "cors";
 
 import aiRoutes from "./routes/aiRoutes.js";
 
-app.use(
-  cors({
-    origin: "https://codemate-99nl.onrender.com", // your frontend URL
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: ["http://localhost:5173", "https://codemate-99nl.onrender.com"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization", "socketid"], // ✅ Add this
+}));
 
 
 

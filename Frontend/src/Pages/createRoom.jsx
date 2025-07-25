@@ -19,10 +19,16 @@ const CreateRoom = () => {
   const [participants, setParticipants] = useState([""]);
   const [showSuccess, setShowSuccess] = useState(false);
   const [adminEmail, setAdminEmail] = useState("");
-  useEffect(() => {
-    const email = localStorage.getItem("userEmail");
-    if (email) setAdminEmail(email);
-  }, []);
+ useEffect(() => {
+  const userData = localStorage.getItem("user");
+  if (userData) {
+    const parsedUser = JSON.parse(userData);
+    if (parsedUser.email) {
+      setAdminEmail(parsedUser.email);
+    }
+  }
+}, []);
+
 
 
   const floatingChars = useMemo(() => {
