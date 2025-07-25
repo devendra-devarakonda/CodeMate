@@ -91,6 +91,7 @@ const OtpVerification = () => {
       setTimer(30);
     } catch (err) {
       setError(err?.response?.data?.message || "Failed to resend OTP.");
+      console.error("OTP resend error:", err);
     } finally {
       setResending(false);
     }
