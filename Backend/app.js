@@ -45,12 +45,7 @@ app.use('/api/user',userRoute);
 
 app.use("/api/ai", aiRoutes);
 
-// ✅ Connect to DB first, then start server
-connection().then(() => {
-  app.listen(PORT, () => {
-    console.log("");
-  });
-});
+
 
 
 

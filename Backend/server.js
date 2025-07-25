@@ -127,6 +127,7 @@
 
 import http from 'http';
 import dotenv from 'dotenv';
+import connection from './config/db.js';
 dotenv.config();
 
 
@@ -145,7 +146,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // your frontend URL
+    origin: "https://codemate-99nl.onrender.com", // your frontend URL
     credentials: true,
   },
 });
@@ -234,6 +235,9 @@ socket.on("language-change", ({ roomId, language }) => {
   });
 });
 
-server.listen(port, () => {
-  console.log("Server listening on port 5000");
+// ✅ Connect to DB first, then start server
+connection().then(() => {
+  app.listen(port, () => {
+    console.log("");
+  });
 });
