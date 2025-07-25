@@ -1,13 +1,18 @@
 import mongoose from 'mongoose';
 
-function connection (){
-    mongoose.connect(process.env.MONGODB_URI).then(()=>{
-        console.log("Server is Connected");
-    })
+async function connection() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 30000, // ⬅️ Helps on Render free tier
+    });
 
-    .catch((err)=>{
-        console.log(err);
-    })
+    console.log("✅ MongoDB Connected Successfully");
+  } catch (err) {
+    console.error("❌ MongoDB Connection Error:", err);
+    process.exit(1); // exit app if DB connection fails
+  }
 }
 
 export default connection;
