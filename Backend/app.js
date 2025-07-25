@@ -24,7 +24,7 @@ import aiRoutes from "./routes/aiRoutes.js";
 
 app.use(
   cors({
-    origin: "https://codemate-qzju.onrender.com", // your frontend URL
+    origin: "https://codemate-99nl.onrender.com", // your frontend URL
     credentials: true,
   })
 );
