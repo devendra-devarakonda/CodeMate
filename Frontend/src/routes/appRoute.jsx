@@ -12,6 +12,8 @@ import MobileWarning from '../Components/mobileWarning.jsx'; // Importing the Mo
 import AboutSection from '../Components/aboutSection.jsx';
 import FeaturesSection from '../Components/featuresSection.jsx';
 import WhyCodeMateSection from '../Components/WhyCodeMate.jsx';
+import UnavailablePage from "../Pages/UnavailablePage.jsx"
+
 
 
 const AppRoute = ({ revealNow }) => {
@@ -30,6 +32,8 @@ const AppRoute = ({ revealNow }) => {
       <Route path="/about" element={<AboutSection />} />
       <Route path="/features" element={<FeaturesSection />} />
       <Route path="/why-codemate" element={<WhyCodeMateSection />} />
+      <Route path="/unpage" element={<UnavailablePage />} />
+      {/* Add more routes as needed */}
 
     </Routes>
     </>

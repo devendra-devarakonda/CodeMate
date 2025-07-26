@@ -87,7 +87,8 @@ const CreateRoom = () => {
     );
 
     setShowSuccess(true);
-    setTimeout(() => navigate(`/dev-room/${roomId}`), 2000);
+    // setTimeout(() => navigate(`/dev-room/${roomId}`), 2000);
+    setTimeout(() => navigate(`/unpage`), 2000);
   } catch (err) {
     console.error("❌ Appwrite error:", err);
     alert("❌ Failed to create room. Check console for details.");
