@@ -264,7 +264,7 @@ const CodeEditor = ({ currentUser = "User" }) => {
             onChange={(e) => handleLanguageChange(e.target.value)}
           >
             {languageOptions.map((lang) => (
-              <option key={lang} value={lang}>
+              <option className="text-white bg-gray-600" key={lang} value={lang}>
                 {lang.toUpperCase()}
               </option>
             ))}
